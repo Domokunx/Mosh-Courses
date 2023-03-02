@@ -84,6 +84,6 @@ public class Main {
     }
 
     private static int numberOfUniquePairWithDiff (int[] array, int diff) {
-        
+
     }
 }
