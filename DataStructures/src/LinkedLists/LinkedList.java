@@ -1,5 +1,6 @@
 package DataStructures.src.LinkedLists;
 
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class LinkedList {
@@ -14,6 +15,7 @@ public class LinkedList {
 
     private Node first;
     private Node last;
+    private int size = 0;
 
     //addFirst
     public void addFirst(int value){
@@ -25,6 +27,7 @@ public class LinkedList {
             node.next = first;
             first = node;
         }
+        size++;
     }
 
     //addLast
@@ -38,6 +41,7 @@ public class LinkedList {
             last.next = node;
             last = node;
         }
+        size++;
     }
 
     //deleteFirst
@@ -50,22 +54,38 @@ public class LinkedList {
         // only 1 item
         if (first == last) {
             first = last = null;
+            size--;
             return;
         }
 
         Node second = first.next;
         first.next = null;
+        size--;
         first = second;
     }
 
     //deleteLast
     public void deleteLast() {
-        Node node = first;
-        while (node.next != last){
-            node = node.next;
+        // no item
+        if (isEmpty()) {
+            throw new NoSuchElementException("List is empty");
         }
-        last = node;
-        node.next = null;
+
+        // 1 item
+        if (first == last) {
+            first = last = null;
+            size--;
+            return;
+        }
+
+        // More than 1 item
+        Node newLast = first;
+        while (newLast.next != last){
+            newLast = newLast.next;
+        }
+        newLast.next = null;
+        last = newLast;
+        size--;
     }
 
     //contains
@@ -84,6 +104,55 @@ public class LinkedList {
             index++;
         }
         return -1;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public int[] toArray() {
+        int[] array = new int[size];
+        Node current = first;
+        int i = 0;
+        while (current != null) {
+            array[i++] = current.value;
+            current = current.next;
+        }
+        return array;
+    }
+
+    public void reverse() {
+        // No item or 1 item
+        if (isEmpty() || first == last) return;
+
+        Node current = first.next;
+        Node previous = first;
+
+        while  (current != null) {
+            Node next = current.next;
+            current.next = previous;
+
+            previous = current;
+            current = next;
+        }
+
+        first.next = null;
+        last = first;
+        first = previous;
+    }
+
+    public Node KthNodeFromtheEnd(int nodeFromEnd){
+        if (isEmpty()) throw new IllegalStateException("Empty List");
+        if (nodeFromEnd <= 0 || nodeFromEnd > size) throw new IllegalArgumentException("Not within List Range");
+
+        Node resultPtr = first;
+        int nodesToTraverse =  size - nodeFromEnd;
+
+        while (nodesToTraverse > 0) {
+            resultPtr = resultPtr.next;
+            nodesToTraverse--;
+        }
+        return resultPtr;
     }
 
     private boolean isEmpty() {
