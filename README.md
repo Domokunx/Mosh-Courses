@@ -8,3 +8,5 @@
 [certificate-of-completion-for-ultimate-java-part-1-fundamentals.pdf](https://github.com/Domokunx/Mosh-Courses/files/10979007/certificate-of-completion-for-ultimate-java-part-1-fundamentals.pdf)
 
 [certificate-of-completion-for-ultimate-java-part-2-object-oriented-programming.pdf](https://github.com/Domokunx/Mosh-Courses/files/10979008/certificate-of-completion-for-ultimate-java-part-2-object-oriented-programming.pdf)
+
+[certificate-of-completion-for-the-complete-node-js-course.pdf](https://github.com/Domokunx/Mosh-Courses/files/10979062/certificate-of-completion-for-the-complete-node-js-course.pdf)
