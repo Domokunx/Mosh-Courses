@@ -1,5 +1,7 @@
 package com.cliff.BST;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Tree BST = new Tree();
@@ -10,13 +12,15 @@ public class Main {
         BST.insert(14);
         BST.insert(17);
 
-        Tree BST2 = new Tree();
-        BST2.insert(10);
-        BST2.insert(34);
-        BST2.insert(3);
-        BST2.insert(1);
-        BST2.insert(14);
-        BST2.insert(17);
-        System.out.println(BST.equal(BST2));
+        int[] nodes = BST.nodeKthDistanceFromRoot(1);
+        System.out.println(Arrays.toString(nodes));
+        System.out.println(BST.getSize());
+        System.out.println(BST.countLeaves());
+        System.out.println(BST.maxValue());
+        System.out.println(BST.minValue());
+        System.out.println(BST.contains(-1));
+        System.out.println(BST.areSiblings(34, -3));
+        System.out.println(BST.getAncestors(17));
+        BST.traverseLevelOrder();
     }
 }
