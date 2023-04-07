@@ -39,7 +39,6 @@ public class Main {
         DAG.addEdge("3", "1");
 
         DAG.topologicalSort();
-
-
+        System.out.println(DAG.hasCycle());
     }
 }

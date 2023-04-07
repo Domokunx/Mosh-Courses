@@ -173,6 +173,33 @@ public class Graph {
     }
 
     public boolean hasCycle() {
-        
+        Set<Node> visiting = new HashSet<>();
+        Set<Node> visited = new HashSet<>();
+        Set<Node> nodes = new HashSet<>(this.nodes.values());
+
+        while (!nodes.isEmpty()) {
+            Node currentNode = nodes.iterator().next();
+            if (hasCycle(currentNode, visited, visiting, nodes))
+                return true;
+        }
+        return false;
+    }
+    private boolean hasCycle(Node currentNode, Set<Node> visited, Set<Node> visiting, Set<Node> nodes) {
+        nodes.remove(currentNode);
+        visiting.add(currentNode);
+
+        for (Node neighbour : adjacencyList.get(currentNode)) {
+            if (visited.contains(neighbour))
+                continue;
+
+            if (visiting.contains(neighbour))
+                return true;
+
+            if (hasCycle(neighbour, visited, visiting, nodes))
+                return true;
+        }
+        visited.add(currentNode);
+        visiting.remove(currentNode);
+        return false;
     }
 }
