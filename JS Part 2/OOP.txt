@@ -1,0 +1,57 @@
+Object Oriented Programming
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism
+-----------------------------------------------------
+ENCAPSULATION
+~~~~~~~~~~~~~
+Grouping related data and functions/methods that manipulate that data into 1 Object.
+
+Pros:
+-> Allows for better consolidation of code (easier to read and update)
+
+-> Ensures that we don't get spaghetti code (interdependent code), 
+    where changing one function breaks another
+
+Cons:
+-> Requires more meticulous planning on where each piece of data goes (need to know the big picture)
+
+----------------------------------------------------
+ABSTRACTION
+~~~~~~~~~~~
+Hiding unnecessary details from the interface.
+
+Pros:
+-> Reduces the impact of change. 
+    Users have less control and access to the Object source code, 
+    so they have less chance of breaking things
+
+-> Easier interface
+    Users only see what they need, the interface is not polluted with unnecessary methods/data
+
+---------------------------------------------------
+INHERITANCE
+~~~~~~~~~~~
+Children objects can use the same code from Parent/Super objects
+
+Pros:
+-> Reusable code
+    Don't have to type everything again and again
+
+-> Easier fixes/changes
+    Fix the parent, fix the child 
+
+Cons:
+-> Might result in unnecessary data/methods
+    Not all properties of the parent is needed in the child (takes memory even if u hide with abstraction)
+
+-----------------------------------------------------
+POLYMORPHISM 
+~~~~~~~~~~~~
+Allows for code to take different forms/ work on different data types
+
+Pros:
+-> Reusable code
+    Instead of creating a separate function for each child object, they can use the inherited function.
+    This allows us to create cleaner code if we want to, for example, loop  
