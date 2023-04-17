@@ -3,6 +3,8 @@
 
 [certificate-of-completion-for-javascript-basics.pdf](https://github.com/Domokunx/Mosh-Courses/files/10979005/certificate-of-completion-for-javascript-basics.pdf)
 
+[certificate-of-completion-for-object-oriented-programming-in-javascript.pdf](https://github.com/Domokunx/Mosh-Courses/files/11246631/certificate-of-completion-for-object-oriented-programming-in-javascript.pdf)
+
 [certificate-of-completion-for-the-ultimate-data-structures-algorithms-part-1.pdf](https://github.com/Domokunx/Mosh-Courses/files/10979006/certificate-of-completion-for-the-ultimate-data-structures-algorithms-part-1.pdf)
 
 [certificate-of-completion-for-the-ultimate-data-structures-algorithms-part-2.pdf](https://github.com/Domokunx/Mosh-Courses/files/11185699/certificate-of-completion-for-the-ultimate-data-structures-algorithms-part-2.pdf)
