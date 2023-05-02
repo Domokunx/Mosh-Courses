@@ -7,6 +7,7 @@ export default defineConfig({
   root:"src/pages",
   plugins: [react()],
   build: {
+    emptyOutDir: true,
     rollupOptions: {
       input: {
         layout: resolve(__dirname, "src", "pages", "Layout", "index.html"),
