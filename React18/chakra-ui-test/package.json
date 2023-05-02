@@ -1,5 +1,5 @@
 {
-  "name": "mosh-project",
+  "name": "chakra-ui-test",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,13 +11,16 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.6.0",
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "framer-motion": "^10.12.4",
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "framer-motion": "^10.12.5",
+    "glob": "^10.2.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vercel": "^29.0.3"
   },
   "devDependencies": {
+    "@types/node": "^18.16.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
