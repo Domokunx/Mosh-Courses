@@ -23,7 +23,7 @@ function App() {
         </Button>
       </Box>
 
-      <NavBar selected="Forms"/>
+      <NavBar colorMode={colorMode} selected="Forms"/>
     </Box>
   );
 }

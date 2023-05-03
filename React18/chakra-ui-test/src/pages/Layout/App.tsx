@@ -33,7 +33,7 @@ function App() {
         </Button>
       </Box>
 
-      <NavBar selected="Layout"/>
+      <NavBar colorMode={colorMode} selected="Layout" />
 
       <StyleProps colorMode={colorMode} />
       <ColorMode colorMode={colorMode} toggleColorMode={toggleColorMode} />
