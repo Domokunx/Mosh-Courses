@@ -70,9 +70,9 @@ const Stacks = ({ colorMode }: Props) => {
       <br />
       <Text decoration={"underline"}>HStack Example:</Text>
       <UnorderedList>
-        <ListItem>spacing: 100px</ListItem>
+        <ListItem>spacing: 20px</ListItem>
       </UnorderedList>
-      <HStack divider={<StackDivider borderColor={"pink.50"} />} spacing={"100px"}>
+      <HStack divider={<StackDivider borderColor={"pink.50"} />} spacing={"20px"}>
         <Container textAlign={"center"} border={"gray 1px solid"}>
           Container 1
         </Container>
