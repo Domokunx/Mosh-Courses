@@ -27,7 +27,7 @@ function App() {
         <NavBar selected="" colorMode={colorMode}/>
         <br />
         <Box>
-          <Center>Welcome to my very badly composed website</Center>
+          <Center fontWeight={"extrabold"} fontSize={"6xl"} bgClip={"text"} bgGradient={'linear(to-r,pink.400,purple.500)'}>Welcome to my very badly composed website</Center>
         </Box>
       </Box>
       <Analytics />

@@ -2,6 +2,8 @@ import { Box, Button, useColorMode, Heading, Center, Link } from "@chakra-ui/rea
 import { NavBar } from "../../components/navbar";
 import { Analytics } from "@vercel/analytics/react";
 import Buttons from "./components/buttons";
+import Checkboxes from "./components/checkboxes";
+import Editables from "./components/editables";
 
 // Boxes are the most abstract, they render divs
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <NavBar colorMode={colorMode} selected="Forms" />
 
         <Buttons colorMode={colorMode} />
+        <Checkboxes colorMode={colorMode}/>
+        <Editables colorMode={colorMode} />
       </Box>
       <Analytics />
     </>

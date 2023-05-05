@@ -19,6 +19,7 @@ const Buttons = ({ colorMode }: Props) => {
             Buttons
           </Text>
           <Link
+            target="_blank"
             color={colorMode === "light" ? "blue" : "yellowgreen"}
             href="https://chakra-ui.com/docs/components/button/props"
           >
@@ -112,8 +113,9 @@ const Buttons = ({ colorMode }: Props) => {
             ></Input>
           </HStack>
         </Wrap>
-        
-        <Code children={`<Button 
+
+        <Code
+          children={`<Button 
             isLoading="${isLoading}" 
             size="${buttonSize}"
             variant="${buttonVariant}"
@@ -121,7 +123,8 @@ const Buttons = ({ colorMode }: Props) => {
             colorScheme="${colorScheme}"
           >
             Click me!
-          </Button>`}/>
+          </Button>`}
+        />
       </Box>
     );
 }
