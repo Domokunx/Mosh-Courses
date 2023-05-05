@@ -12,6 +12,7 @@ const Wraps = ({ colorMode }: Props) => {
           Wrap
         </Text>
         <Link
+          target="_blank"
           color={colorMode === "light" ? "blue" : "yellowgreen"}
           href="https://chakra-ui.com/docs/components/wrap"
         >
@@ -21,8 +22,12 @@ const Wraps = ({ colorMode }: Props) => {
       <Box>Wraps are like flexboxes with spacing support</Box>
       <Text>Useful Props:</Text>
       <UnorderedList>
-        <ListItem>align - change alignment along the cross-axis (V.align)</ListItem>
-        <ListItem>justify - change alignment along the main-axis (H.align)</ListItem>
+        <ListItem>
+          align - change alignment along the cross-axis (V.align)
+        </ListItem>
+        <ListItem>
+          justify - change alignment along the main-axis (H.align)
+        </ListItem>
       </UnorderedList>
       <br />
       <Text decoration={"underline"}>Example: (align='center')</Text>

@@ -150,19 +150,19 @@ const Checkboxes = ({ colorMode }: Props) => {
         </HStack>
       </Wrap>
 
-      <Code
-        children={`<Checkbox
-          defaultChecked
-          isDisabled="${isDisabled}"
-          isInvalid="${isInvalid}"
-          size="${checkboxSize}"
-          colorScheme="${colorScheme}"
-          iconColor="${iconColor}"
-          spacing="${spacing}"
-        >
-          Label
-        </Checkbox>`}
-      />
+        <Code width={"full"}>
+          {`<Checkbox`} <br />
+            {`defaultChecked`} <br />
+            {`isDisabled="${isDisabled}" `} <br />
+            {`isInvalid="${isInvalid}" `} <br />
+            {`size="${checkboxSize}" `} <br />
+            {`colorScheme="${colorScheme}" `} <br />
+            {`iconColor="${iconColor}" `} <br />
+            {`spacing="${spacing}" `} <br />
+            {`>`} <br />
+            Label <br />
+          {`</Checkbox>`}
+        </Code>
     </Box>
   );
 };

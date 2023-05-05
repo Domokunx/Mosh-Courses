@@ -13,6 +13,7 @@ const ColorMode = ({ colorMode, toggleColorMode }: Props) => {
           ColorMode
         </Text>
         <Link
+          target="_blank"
           color={colorMode === "light" ? "blue" : "yellowgreen"}
           href="https://chakra-ui.com/docs/styled-system/color-mode"
         >

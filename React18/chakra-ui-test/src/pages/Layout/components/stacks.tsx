@@ -23,6 +23,7 @@ const Stacks = ({ colorMode }: Props) => {
           Stack, VStack & HStack
         </Text>
         <Link
+          target="_blank"
           href="https://chakra-ui.com/docs/components/stack"
           color={colorMode === "light" ? "blue" : "yellowgreen"}
         >
@@ -48,7 +49,8 @@ const Stacks = ({ colorMode }: Props) => {
           width, height - chakra has a reserved value "full" for 100%
         </ListItem>
         <ListItem>
-          divider - pass a component to this prop and it will appear between every stack item (note: it also has spacing)
+          divider - pass a component to this prop and it will appear between
+          every stack item (note: it also has spacing)
         </ListItem>
       </UnorderedList>
       <br />
@@ -72,7 +74,10 @@ const Stacks = ({ colorMode }: Props) => {
       <UnorderedList>
         <ListItem>spacing: 20px</ListItem>
       </UnorderedList>
-      <HStack divider={<StackDivider borderColor={"pink.50"} />} spacing={"20px"}>
+      <HStack
+        divider={<StackDivider borderColor={"pink.50"} />}
+        spacing={"20px"}
+      >
         <Container textAlign={"center"} border={"gray 1px solid"}>
           Container 1
         </Container>
@@ -86,10 +91,15 @@ const Stacks = ({ colorMode }: Props) => {
       </HStack>
       <br />
       <Text decoration={"underline"}>Stack Dividers</Text>
-      <Text>Optional Component you can pass as to the "divider" prop that acts like a line break</Text>
+      <Text>
+        Optional Component you can pass as to the "divider" prop that acts like
+        a line break
+      </Text>
       <br />
       <Text decoration={"underline"}>Stacks vs Flex</Text>
-      <Text>Stacks do not follow its containers width (overflow), FlexBoxes do</Text>
+      <Text>
+        Stacks do not follow its containers width (overflow), FlexBoxes do
+      </Text>
     </Box>
   );
 };

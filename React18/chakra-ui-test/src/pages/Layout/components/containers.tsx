@@ -11,6 +11,7 @@ const Containers = ({ colorMode }: Props) => {
           Container
         </Text>
         <Link
+          target="_blank"
           href="https://chakra-ui.com/docs/components/container"
           color={colorMode === "light" ? "blue" : "yellowgreen"}
         >

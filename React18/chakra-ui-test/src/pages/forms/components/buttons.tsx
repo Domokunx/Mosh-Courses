@@ -114,17 +114,17 @@ const Buttons = ({ colorMode }: Props) => {
           </HStack>
         </Wrap>
 
-        <Code
-          children={`<Button 
-            isLoading="${isLoading}" 
-            size="${buttonSize}"
-            variant="${buttonVariant}"
-            loadingText="${loadingText}"
-            colorScheme="${colorScheme}"
-          >
-            Click me!
-          </Button>`}
-        />
+        <Code width={"full"}>
+          {`<Button`} <br />
+            {`isLoading="${isLoading}" `} <br /> 
+            {`size="${buttonSize}" `} <br />
+            {`variant="${buttonVariant}" `} <br />
+            {`loadingText="${loadingText}" `} <br />
+            {`colorScheme="${colorScheme}" `} <br />
+            {`>`} <br />
+            Click me! <br />
+          {`</Button>`}
+        </Code>
       </Box>
     );
 }

@@ -12,6 +12,7 @@ const FlexBox = ({ colorMode }: Props) => {
           Flex
         </Text>
         <Link
+          target="_blank"
           href="https://chakra-ui.com/docs/components/flex"
           color={colorMode === "light" ? "blue" : "yellowgreen"}
         >

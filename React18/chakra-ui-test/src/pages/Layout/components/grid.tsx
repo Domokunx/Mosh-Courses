@@ -100,6 +100,7 @@ const Grids = ({ colorMode }: Props) => {
       <Text>
         Chakra also has a SimpleGrid Component you can check out{" "}
         <Link
+          target="_blank"
           color={colorMode === "light" ? "blue" : "yellowgreen"}
           href="https://chakra-ui.com/docs/components/simple-grid"
         >

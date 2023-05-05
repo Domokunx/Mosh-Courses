@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Buttons from "./components/buttons";
 import Checkboxes from "./components/checkboxes";
 import Editables from "./components/editables";
+import FormControls from "./components/formcontrols";
 
 // Boxes are the most abstract, they render divs
 function App() {
@@ -27,8 +28,9 @@ function App() {
         <NavBar colorMode={colorMode} selected="Forms" />
 
         <Buttons colorMode={colorMode} />
-        <Checkboxes colorMode={colorMode}/>
+        <Checkboxes colorMode={colorMode} />
         <Editables colorMode={colorMode} />
+        <FormControls colorMode={colorMode} />
       </Box>
       <Analytics />
     </>

@@ -11,6 +11,7 @@ const Boxes = ({ colorMode }: Props) => {
           Box
         </Text>
         <Link
+          target="_blank"
           color={colorMode === "light" ? "blue" : "yellowgreen"}
           href="https://chakra-ui.com/docs/components/box/usage"
         >
