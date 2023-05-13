@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <Box minW={["28em", "46em", "62em", "78em", "94em"]}>
+      <Box minW={["600px", "768px", "960px", "full"]}>
         <Box marginTop={5}>
           <Center>
             <Heading>

@@ -6,8 +6,11 @@ import {
   Center,
   Link,
 } from "@chakra-ui/react";
+import { NavBar } from "../../components/navbar";
 import { Analytics } from "@vercel/analytics/react";
-import { NavBar } from "../components/navbar";
+import Introduction from "./components/introduction";
+import Colors from "./components/colors";
+import Typography from "./components/typography";
 
 // Boxes are the most abstract, they render divs
 function App() {
@@ -15,29 +18,25 @@ function App() {
 
   return (
     <>
-      <Box minW={["600px", "768px", "960px", "full"]}>
+      <Box w={["600px", "768px", "960px", "full"]}>
         <Box marginTop={5}>
           <Center>
             <Heading>
-              <Link href="/">Chakra UI Hub</Link>
+              <Link href="/">Chakra UI Themes</Link>
             </Heading>
           </Center>
+
           <Button top={"-40px"} ml={5} onClick={toggleColorMode}>
             Toggle: {colorMode === "light" ? "dark" : "light"}
           </Button>
         </Box>
-        <NavBar selected="" colorMode={colorMode} />
-        <br />
-        <Box>
-          <Center
-            fontWeight={"extrabold"}
-            fontSize={"6xl"}
-            bgClip={"text"}
-            bgGradient={"linear(to-r,pink.400,purple.500)"}
-          >
-            Welcome to my very badly composed website
-          </Center>
-        </Box>
+
+        <NavBar colorMode={colorMode} selected="Themes" />
+
+        <Introduction />
+        <Colors />
+        <Typography />
+
       </Box>
       <Analytics />
     </>

@@ -5,36 +5,25 @@ interface Props {
   colorMode: string;
 }
 export const NavBar = ({ selected, colorMode }: Props) => {
+  const pages = ["Layout", "Forms", "Themes"];
   return (
     <Flex p={5} borderBottom={"solid 1px gray"} justify={"space-evenly"}>
-      <Link
-        color={
-          selected === "Layout"
-            ? colorMode === "dark"
-              ? "yellowgreen"
-              : "blue"
-            : colorMode === "dark"
-            ? "white"
-            : "black"
-        }
-        href="/Layout/index.html"
-      >
-        Layout
-      </Link>
-      <Link
-        color={
-          selected === "Forms"
-            ? colorMode === "dark"
-              ? "yellowgreen"
-              : "blue"
-            : colorMode === "dark"
-            ? "white"
-            : "black"
-        }
-        href="/forms/index.html"
-      >
-        Forms
-      </Link>
+      {pages.map((page, index) => (
+        <Link key={index}
+          color={
+            selected === page
+              ? colorMode === "dark"
+                ? "yellowgreen"
+                : "blue"
+              : colorMode === "dark"
+              ? "white"
+              : "black"
+          }
+          href={"/" + page + "/index.html"}
+        >
+          {page}
+        </Link>
+      ))}
     </Flex>
   );
 };

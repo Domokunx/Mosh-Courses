@@ -4,7 +4,7 @@ import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  root:"src/pages",
+  root: "src/pages",
   plugins: [react()],
   build: {
     emptyOutDir: true,
@@ -12,7 +12,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "src", "pages", "index.html"),
         layout: resolve(__dirname, "src", "pages", "Layout", "index.html"),
-        forms: resolve(__dirname, "src", "pages", "forms", "index.html"),
+        forms: resolve(__dirname, "src", "pages", "Forms", "index.html"),
+        themes: resolve(__dirname, "src", "pages", "Themes", "index.html"),
       },
     },
   },
