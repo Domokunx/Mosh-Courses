@@ -1,13 +1,12 @@
-import { Button, HStack, Image, Text, useColorMode } from "@chakra-ui/react"
+import { HStack, Image } from "@chakra-ui/react"
 import logo from "../assets/react.svg"
+import ColorModeSwitch from "./colormodeswitch"
 
 const Navbar = () => {
-    const { toggleColorMode } = useColorMode();
   return (
-    <HStack>
+    <HStack justify={"space-between"} p={"10px"}>
         <Image src={logo} boxSize={"60px"} />
-        <Text>NavBar</Text>
-        <Button onClick={toggleColorMode}> Color Scheme</Button>
+        <ColorModeSwitch />
     </HStack>
   )
 }
