@@ -11,6 +11,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Introduction from "./components/introduction";
 import Colors from "./components/colors";
 import Typography from "./components/typography";
+import Breakpoints from "./components/breakpoints";
 
 // Boxes are the most abstract, they render divs
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Introduction />
         <Colors />
         <Typography />
+        <Breakpoints />
 
       </Box>
       <Analytics />
