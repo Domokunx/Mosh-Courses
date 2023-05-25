@@ -5,7 +5,15 @@ import { CanceledError } from "axios";
 export interface Game {
   name: string;
   id: number;
-  background_image: string
+  background_image: string;
+  parent_platforms: { platform: Platform }[];
+}
+
+interface Platform {
+  id: number;
+  slug: string;
+  image_background: string;
+  name: string;
 }
 
 interface GamesResponse {
