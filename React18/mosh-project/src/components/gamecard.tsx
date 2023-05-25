@@ -13,6 +13,7 @@ import {
 
 } from "react-icons/fa";
 import { IconType } from "react-icons";
+import CriticScore from "./criticscore";
 
 interface Props {
   game: Game;
@@ -36,10 +37,16 @@ const GameCard = ({ game }: Props) => {
       <Image src={game.background_image} />
       <CardBody>
         <Heading fontSize={{ base: "xl", lg: "2xl" }}>{game.name}</Heading>
-        <HStack my={1}>
+        <HStack my={1} justify={"space-between"}>
+            <HStack>
           {game.parent_platforms.map(({ platform }) => (
-            <Icon color={"gray.500"} key={platform.id} as={iconMap[platform.slug]} />
-          ))}
+            <Icon
+              color={"gray.500"}
+              key={platform.id}
+              as={iconMap[platform.slug]}
+            />
+          ))}</HStack>
+          <CriticScore score={game.metacritic} />
         </HStack>
       </CardBody>
     </Card>
