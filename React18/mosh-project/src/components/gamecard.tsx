@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { IconType } from "react-icons";
 import CriticScore from "./criticscore";
+import getCroppedImage from "../services/imageURL";
 
 interface Props {
   game: Game;
@@ -34,7 +35,7 @@ const GameCard = ({ game }: Props) => {
 
   return (
     <Card borderRadius={"10px"} overflow={"hidden"}>
-      <Image src={game.background_image} />
+      <Image src={getCroppedImage(game.background_image)} alt={"Image of " + game.name} />
       <CardBody>
         <Heading fontSize={{ base: "xl", lg: "2xl" }}>{game.name}</Heading>
         <HStack my={1} justify={"space-between"}>
