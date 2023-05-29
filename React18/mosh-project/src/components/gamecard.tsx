@@ -34,7 +34,7 @@ const GameCard = ({ game }: Props) => {
   };
 
   return (
-    <Card borderRadius={"10px"} overflow={"hidden"}>
+    <Card>
       <Image src={getCroppedImage(game.background_image)} alt={"Image of " + game.name} />
       <CardBody>
         <Heading fontSize={{ base: "xl", lg: "2xl" }}>{game.name}</Heading>
