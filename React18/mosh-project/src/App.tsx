@@ -3,8 +3,12 @@ import Navbar from "./components/navbar";
 import GameGrid from "./components/gamegrid";
 import { Analytics } from "@vercel/analytics/react";
 import GenreList from "./components/genrelist";
+import { useState } from "react";
+import { Genre } from "./hooks/useGenres";
 
 function App() {
+  const [genre, setGenre] = useState<Genre | null>(null);
+
   return (
     <>
       <Grid
@@ -22,11 +26,11 @@ function App() {
         </GridItem>
         <Show above="lg">
           <GridItem px={5} area="aside">
-            <GenreList />
+            <GenreList onSelectGenre={(genre) => setGenre(genre)}/>
           </GridItem>
         </Show>
         <GridItem area={"main"}>
-          <GameGrid />
+          <GameGrid selectedGenre={genre}/>
         </GridItem>
       </Grid>
       <Analytics />
