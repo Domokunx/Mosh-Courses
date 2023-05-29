@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import GenreList from "./components/genrelist";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
+import PlatformSelector from "./components/platformselector";
 
 function App() {
   const [genre, setGenre] = useState<Genre | null>(null);
@@ -26,10 +27,11 @@ function App() {
         </GridItem>
         <Show above="lg">
           <GridItem px={5} area="aside">
-            <GenreList onSelectGenre={(genre) => setGenre(genre)}/>
+            <GenreList selectedGenre={genre} onSelectGenre={(genre) => setGenre(genre)}/>
           </GridItem>
         </Show>
         <GridItem area={"main"}>
+          <PlatformSelector />
           <GameGrid selectedGenre={genre}/>
         </GridItem>
       </Grid>
