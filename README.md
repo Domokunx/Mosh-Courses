@@ -15,3 +15,5 @@
 
 [certificate-of-completion-for-the-complete-node-js-course.pdf](https://github.com/Domokunx/Mosh-Courses/files/10979062/certificate-of-completion-for-the-complete-node-js-course.pdf)
 
+[certificate-of-completion-for-react-18-for-beginners.pdf](https://github.com/Domokunx/Mosh-Courses/files/11663304/certificate-of-completion-for-react-18-for-beginners.pdf)
+
