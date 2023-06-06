@@ -12,7 +12,7 @@ const PlatformSelector = ({ onSelectPlatform , selectedPlatform}: Props) => {
   if (error) return null;
 
   return (
-    <Box>
+    <Box ml={5}>
       <Menu>
         <MenuButton as={Button} rightIcon={<BsChevronCompactDown />}>
           {selectedPlatform?.name || "Platforms"}

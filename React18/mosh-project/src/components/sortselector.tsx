@@ -28,7 +28,7 @@ const SortSelector = ({ onSelectSortOrder, selectedSortOrder }: Props) => {
   ];
 
   return (
-    <Box mx={5}>
+    <Box mr={3}>
       <Menu>
         <MenuButton as={Button} rightIcon={<BsChevronCompactDown />}>
           {selectedSortOrder?.label ? "Sort by: " + selectedSortOrder.label : "Sort by: Relevance"}
