@@ -1,7 +1,7 @@
 import { Card, CardBody, HStack, Heading, Icon, Image } from "@chakra-ui/react";
-import { MdPhoneIphone } from "react-icons/md"
-import { SiNintendo } from "react-icons/si"
-import { BsGlobe } from "react-icons/bs"
+import { MdPhoneIphone } from "react-icons/md";
+import { SiNintendo } from "react-icons/si";
+import { BsGlobe } from "react-icons/bs";
 import { Game } from "../hooks/useGames";
 import {
   FaPlaystation,
@@ -10,7 +10,6 @@ import {
   FaLinux,
   FaApple,
   FaAndroid,
-
 } from "react-icons/fa";
 import { IconType } from "react-icons";
 import CriticScore from "./criticscore";
@@ -35,20 +34,24 @@ const GameCard = ({ game }: Props) => {
 
   return (
     <Card>
-      <Image src={getCroppedImage(game.background_image)} alt={"Image of " + game.name} />
+      <Image
+        src={getCroppedImage(game.background_image)}
+        alt={"Image of " + game.name}
+      />
       <CardBody>
-        <Heading fontSize={{ base: "xl", lg: "2xl" }}>{game.name}</Heading>
-        <HStack my={1} justify={"space-between"}>
-            <HStack>
-          {game.parent_platforms.map(({ platform }) => (
-            <Icon
-              color={"gray.500"}
-              key={platform.id}
-              as={iconMap[platform.slug]}
-            />
-          ))}</HStack>
+        <HStack mb={3} justify={"space-between"}>
+          <HStack>
+            {game.parent_platforms.map(({ platform }) => (
+              <Icon
+                color={"gray.500"}
+                key={platform.id}
+                as={iconMap[platform.slug]}
+              />
+            ))}{" "}
+          </HStack>
           <CriticScore score={game.metacritic} />
         </HStack>
+        <Heading fontSize={{ base: "xl", lg: "2xl" }}>{game.name}</Heading>
       </CardBody>
     </Card>
   );
